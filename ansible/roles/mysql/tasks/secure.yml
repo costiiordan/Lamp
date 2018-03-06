@@ -7,10 +7,14 @@
     - 127.0.0.1
     - ::1
     - localhost
-  when: ansible_hostname != 'localhost'
 
 - name: Configure MySql for easy access as root user
-  template: src=.my.cnf.j2 dest=~/.my.cnf owner=root group=root mode=0644
+  template: 
+    src: my.cnf.j2 
+    dest: /root/.my.cnf
+    owner: root
+    group: root
+    mode: 0644
 
 - name: ensure anonymous users are not in the database
   mysql_user: name='' host=* state=absent

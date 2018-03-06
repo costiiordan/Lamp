@@ -1,11 +1,15 @@
-# file: roles/mysql/tasks/install.yml
-
+---
 - name: MySql packages are installed
-  yum: pkg={{ item }}
+  yum: 
+    name: "{{ item }}"
+    state: installed
   with_items:
     - mariadb-server
     - mariadb
     - MySQL-python
 
 - name: Start the MySQL service
-  service: name=mariadb state=started enabled=true
+  service: 
+    name: mariadb
+    state: started 
+    enabled: true

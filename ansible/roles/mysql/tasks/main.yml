@@ -1,5 +1,2 @@
-# file: roles/mysql/tasks/main.yml
-
 - include: install.yml
-- include: configure.yml
 - include: secure.yml
