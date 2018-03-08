@@ -6,3 +6,6 @@ Vagrant VM for php projects with the following configuration
 * MariaDB
 * NodeJS
 * NPM
+* PhpMyAdmin
+* Redis
+* Elasticsearch
