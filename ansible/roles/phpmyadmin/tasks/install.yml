@@ -1,0 +1,6 @@
+---
+- name: Install Phpmyadmin
+  yum:
+    name: phpmyadmin
+    enablerepo: remi,remi-php56
+    state: installed

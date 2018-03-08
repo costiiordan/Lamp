@@ -1,0 +1,12 @@
+---
+- name: Change default apache vhost
+  template: 
+    src: "{{ item }}.j2"
+    dest: "/etc/httpd/conf.d/{{ item }}"
+  with_items:
+    phpMyAdmin.conf
+
+- name: Restarting httpd
+  service:
+    name: httpd
+    state: restarted

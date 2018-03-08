@@ -1,8 +1,8 @@
 ---
-- name: Install php 7.0
+- name: Install php 7.2
   yum: 
     name: "{{ item }}" 
-    enablerepo: remi,remi-php70 
+    enablerepo: remi,remi-php72 
     state: present
   with_items:
     - php
@@ -11,11 +11,10 @@
     - php-opcache
     - php-soap
     - php-pdo
-    - php-mcrypt
     - php-pecl-xdebug
     - php-xml
     - php-mysql
-    - php-gd
     - php-imagick
+    - php-gd
   notify:
   - restart httpd

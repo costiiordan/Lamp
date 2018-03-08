@@ -6,7 +6,7 @@
     enabled: no
 
 
-- name: Install nano, git, etc
+- name: Install git, curl, wget, vim, epel-release, remi-repo
   yum: 
     name: "{{ item }}" 
     state: installed

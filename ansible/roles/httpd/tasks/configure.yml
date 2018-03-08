@@ -1,5 +1,4 @@
-# file: roles/httpd/tasks/configure.yml
-
+---
 - name: Change default apache vhost
   template: 
     src: "{{ item }}.j2"
@@ -9,7 +8,9 @@
 
 
 - name: Set global ServerName for apache config
-  lineinfile: dest=/etc/httpd/conf/httpd.conf line="ServerName localhost"
+  lineinfile: 
+    dest: "/etc/httpd/conf/httpd.conf"
+    line: "ServerName localhost"
 
 - name: SELinux to disable enforcing
   command: /sbin/setenforce 0

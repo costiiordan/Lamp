@@ -1,11 +1,14 @@
 ---
  - hosts: all
    roles:
-    - nodejs
     - init
     - httpd
-    #- php56
-    - php70
+    - php56
+    #- php70
+    #- php72
     - mysql
     - phpmyadmin
+    - nodejs
+    - redis
+    - elastic
 

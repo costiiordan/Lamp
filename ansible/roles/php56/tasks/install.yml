@@ -1,5 +1,5 @@
 ---
-- name: Install php
+- name: Install php 5.6
   yum: 
     name: "{{ item }}"
     enablerepo: remi,remi-php56
@@ -21,5 +21,6 @@
     - php-mbstring
     - php-mcrypt
     - php-xml
+    - php-imagick
   notify:
   - restart httpd

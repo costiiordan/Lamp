@@ -1,6 +1,4 @@
-# file: roles/mysql/defaults/main.yml
 ---
-
  mysql_root_password: toor
 
  mysql_users:
